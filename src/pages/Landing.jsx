@@ -6,7 +6,6 @@ import { PricingCard } from "@/modules/core/components/PricingCard.jsx";
 import { SkillCard } from "@/modules/core/components/SkillCard.jsx";
 import { TeacherCard } from "@/modules/core/components/TeacherCard.jsx";
 import { TestimonialCard } from "@/modules/core/components/TestimonialCard.jsx";
-import { Button } from "@/components/ui/Button.jsx";
 
 import {
   courses,
@@ -15,6 +14,7 @@ import {
   teachers,
   testimonials,
 } from "@/modules/core/static-data/landing-data.jsx";
+import { Button } from "@/components/ui/button";
 
 export default function Landing() {
   const [level, setLevel] = useState("8");
@@ -27,12 +27,13 @@ export default function Landing() {
       <Header className="bg-black border-b" />
 
       <main className="space-y-32 max-w-7xl mx-auto px-6 py-12">
-
         {/* 2. Hero */}
         <section className="flex flex-col-reverse md:flex-row items-center bg-lightBlue rounded-2xl overflow-hidden">
           <div className="md:w-1/2 p-12 space-y-6">
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-snug">
-              Online Learning<br/>Designed for Courses 8 to 10
+              Online Learning
+              <br />
+              Designed for Courses 8 to 10
             </h1>
             <p className="text-gray-600 text-lg">
               Interactive learning made easy, engaging, and accessible.
@@ -224,16 +225,16 @@ export default function Landing() {
         </section>
 
         {/* 9. Call to Action */}
-        <section className="bg-lightBlue rounded-2xl py-16 text-center">
+        <section className=" rounded-2xl py-16 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
             Start your journey to success today!
           </h2>
           <p className="text-gray-600 mb-8">
             Join thousands of students who are already improving their grades.
           </p>
-          <Button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-blue-700">
-            Get Started Now
-          </Button>
+          <Button variant="outline">Get Started Now</Button>
+          <Button>Button</Button>
+          <Button variant="destructive">Destructive</Button>
         </section>
       </main>
 

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import { Button } from "../../../components/ui/Button.jsx"
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -29,7 +29,9 @@ export default function Header() {
 
         <div className="flex gap-2">
           <Link to="/login">
-            <Button size="sm" variant="outline">Login</Button>
+            <Button size="sm" variant="outline">
+              Login
+            </Button>
           </Link>
           <Link to="/signup">
             <Button size="sm">Sign Up</Button>
@@ -37,5 +39,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

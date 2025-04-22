@@ -1,4 +1,4 @@
-import { Button } from "../../../components/ui/Button"
+import { Button } from "@/components/ui/button";
 
 export function TeacherCard({ name, subject, experience, education }) {
   return (
@@ -12,5 +12,5 @@ export function TeacherCard({ name, subject, experience, education }) {
         View Profile
       </Button>
     </div>
-  )
+  );
 }
