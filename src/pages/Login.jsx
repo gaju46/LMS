@@ -1,14 +1,20 @@
 import { useState } from "react";
-import { useAuth } from "../modules/core/providers/AuthProvider";
+// import { useAuth } from "../modules/core/providers/AuthProvider";
+import { useProfile } from "../modules/core/hooks/useProfile";
 
 export default function LoginPage() {
-  const { signin } = useAuth();
+  // const { signin } = useAuth();
+  // console.log(signin);
+
+  const {user} = useProfile();
+  console.log(user,'user of hook')
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = async e => {
     e.preventDefault();
-    await signin({ email, password });
+    // await signin({ email, password });
     // navigate to /profile on success…
   };
 

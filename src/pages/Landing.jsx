@@ -31,9 +31,9 @@ export default function Landing() {
         <section className="flex flex-col-reverse md:flex-row items-center bg-lightBlue rounded-2xl overflow-hidden">
           <div className="md:w-1/2 p-12 space-y-6">
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-snug">
-              Online Learning
-              <br />
-              Designed for Courses 8 to 10
+              Learn Now 
+              <br/> <p className="text-blue-400/100 ">Learn From Anywhere</p> 
+              Designed for Interactive Courses 
             </h1>
             <p className="text-gray-600 text-lg">
               Interactive learning made easy, engaging, and accessible.
@@ -42,18 +42,17 @@ export default function Landing() {
               <Button className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700">
                 View Course
               </Button>
-              <Button className="border-2 border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary/10">
-                Join Free Today
+              <Button className="bg-green-600 border-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+                Get Started
               </Button>
             </div>
           </div>
           <div className="md:w-1/2 bg-gray-200 rounded-2xl h-64 md:h-auto">
-            {/* replace with real hero graphic */}
             <img
-              src="/hero-placeholder.png"
-              alt="Hero"
-              className="w-full h-full object-cover rounded-2xl"
-            />
+               src="/src/assets/pictures/hero photo.png"
+               alt="Hero"
+               className="w-full sm:w-[400px] h-[250px] sm:h-[350px] object-cover rounded-2xl hover:scale-110 hover:shadow-lg transition-transform duration-300"
+               />
           </div>
         </section>
 
@@ -63,7 +62,7 @@ export default function Landing() {
             Why Choose Lotus E School?
           </h2>
           <p className="text-center text-gray-500 mb-8">
-            The perfect learning platform for courses 8, 9, and 10
+            The perfect learning platform for greater future 
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -114,13 +113,16 @@ export default function Landing() {
               <button
                 key={l}
                 onClick={() => setLevel(l)}
-                className={
-                  level === l
-                    ? "px-4 py-2 rounded-full bg-primary text-white"
-                    : "px-4 py-2 rounded-full bg-white text-gray-600 border border-gray-300"
-                }
+                className={`relative px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 transform
+                  ${
+                    level === l
+                      ? "bg-primary text-white shadow-md"
+                      : "bg-white text-gray-700 border border-gray-300 hover:border-blue-600 hover:text-blue-600"
+                  }
+                  group active:scale-95 focus:outline-none`}
               >
                 Class {l}
+                
               </button>
             ))}
           </div>
@@ -154,7 +156,8 @@ export default function Landing() {
             ))}
           </div>
           <div className="text-center mt-6">
-            <Button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-blue-700">
+            <Button className="bg-primary text-white px-8 py-3 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:scale-105"
+            >
               Explore All Skills
             </Button>
           </div>
@@ -232,7 +235,9 @@ export default function Landing() {
           <p className="text-gray-600 mb-8">
             Join thousands of students who are already improving their grades.
           </p>
-          <Button variant="outline">Get Started Now</Button>
+          <Button variant="outline">Outline</Button>
+          <Button variant="secondary">Secondary</Button>
+          <Button variant="primary">Primary</Button>
           <Button>Button</Button>
           <Button variant="destructive">Destructive</Button>
         </section>
